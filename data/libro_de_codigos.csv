@@ -1,0 +1,26 @@
+﻿variable,tipo,descripcion,clave
+CODIGO,texto,Código único del establecimiento (##-##-####-##). Prefijo = departamento.,Sí (clave)
+DISTRITO,texto,Código de distrito escolar (formato corto o largo del portal).,No
+DEPARTAMENTO,categórica,Departamento según el portal (incluye 'CIUDAD CAPITAL').,No
+MUNICIPIO,texto,Municipio; en la capital corresponde a la ZONA.,No
+ESTABLECIMIENTO,texto,Nombre del establecimiento.,No
+DIRECCION,texto,Dirección física (sin fecha incrustada).,No
+TELEFONO,texto,Teléfono(s) tal como venían (original).,No
+SUPERVISOR,texto,Nombre del supervisor.,No
+DIRECTOR,texto,Nombre del director.,No
+NIVEL,categórica,Nivel escolar; constante 'DIVERSIFICADO'.,No
+SECTOR,categórica,OFICIAL/PRIVADO/MUNICIPAL/COOPERATIVA.,No
+AREA,categórica,URBANA/RURAL (NA si venía 'SIN ESPECIFICAR').,No
+STATUS,categórica,Estado del establecimiento.,No
+MODALIDAD,categórica,MONOLINGUE/BILINGUE.,No
+JORNADA,categórica,Jornada de estudio.,No
+PLAN,categórica,Plan de estudios.,No
+DEPARTAMENTAL,categórica,"Dirección Departamental de Educación (DIDEDUC), administrativa.",No
+DEPARTAMENTO_OFICIAL,categórica (derivada),Departamento geográfico validado desde el prefijo de CODIGO.,No
+ES_CIUDAD_CAPITAL,booleana (derivada),True si el establecimiento está en la Ciudad de Guatemala (prefijo 00).,No
+FECHA_EN_DIRECCION,texto (derivada),Fecha dd/mm/aaaa extraída de DIRECCION.,No
+TELEFONO_PRINCIPAL,texto (derivada),Primer teléfono válido de 8 dígitos.,No
+TELEFONO_ADICIONALES,texto (derivada),Teléfonos secundarios separados por ';'.,No
+N_TELEFONOS,entero (derivada),Cantidad de teléfonos válidos.,No
+TELEFONO_VALIDO,booleana (derivada),Calidad del teléfono (NA si no había dato).,No
+DUP_PARCIAL_SOSPECHOSO,booleana (derivada),Marca de posible duplicado parcial para revisión manual.,No
